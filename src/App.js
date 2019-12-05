@@ -15,6 +15,7 @@ const useRating = () => {
   const loadVotes = () => {
     axios
       .get("/api/elon")
+      .catch(() => setState({ ...state, loading: false }))
       .then(resp => resp.data)
       .then(data => {
         console.log(data);
@@ -28,11 +29,25 @@ const useRating = () => {
 
   const upvote = () => {
     setState({ ...state, loading: true });
-    setTimeout(() => axios.post("/api/elon/good").then(() => loadVotes()), 500);
+    setTimeout(
+      () =>
+        axios
+          .post("/api/elon/good")
+          .then(() => loadVotes())
+          .catch(() => setState({ ...state, loading: false })),
+      500
+    );
   };
   const downvote = () => {
     setState({ ...state, loading: true });
-    setTimeout(() => axios.post("/api/elon/bad").then(() => loadVotes()), 500);
+    setTimeout(
+      () =>
+        axios
+          .post("/api/elon/bad")
+          .then(() => loadVotes())
+          .catch(() => setState({ ...state, loading: false })),
+      500
+    );
   };
 
   return [state, upvote, downvote];
