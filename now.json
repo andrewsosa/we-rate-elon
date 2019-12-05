@@ -1,0 +1,15 @@
+{
+  "name": "we-rate-elon",
+  "public": true,
+  "env": {
+    "REDIS_HOST": "@redis-host",
+    "REDIS_PASS": "@redis-password",
+    "RATE_LIMIT": "43200"
+  },
+  "routes": [
+    {
+      "src": "/api(.*)",
+      "dest": "/api/index.js"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+/* @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"); */
+
+/* @font-face {
+  font-family: "Permanent Marker";
+  src: local("Permanent Marker"),
+    url(./fonts/PermanentMarker-Regular.ttf) format("opentype");
+} */
+
+@font-face {
+  font-family: "Space Mono";
+  font-weight: 400;
+  src: local("Space Mono"),
+    url(./fonts/SpaceMono-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-weight: 400;
+  font-style: italic;
+  src: local("Space Mono"), url(./fonts/SpaceMono-Italic.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-weight: 700;
+  src: local("Space Mono"), url(./fonts/SpaceMono-Bold.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-weight: 700;
+  font-style: italic;
+  src: local("Space Mono"),
+    url(./fonts/SpaceMono-BoldItalic.ttf) format("opentype");
+}
+
+.spacemono {
+  font-family: "Space Mono", "Courier New", Courier, monospace;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.shadow {
+  text-shadow: 1px 1px 0px #000000aa;
+}
